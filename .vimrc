@@ -1,7 +1,7 @@
 "
 " .vimrc
 "
-" Author: Jair Trejo <jairtrejo@gmail.com>
+" Author: Jair Trejo <jair@jairtrejo.mx>
 "
 
 "
