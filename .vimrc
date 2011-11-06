@@ -134,7 +134,6 @@ autocmd BufRead *\.tex,*\.txt,*\.mkd setlocal lbr
 "
 " Markdown
 " 
-autocmd BufRead *\.mkd,*\.md set ft=mkd
 autocmd BufRead *\.mkd,*\.md set ai formatoptions=tcroqn2 comments=n:&gt;
 
 "
