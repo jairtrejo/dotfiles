@@ -14,13 +14,13 @@ syntax on
 filetype plugin on
 set encoding=utf-8
 set mouse=a
-set relativenumber
 set title
 set nobackup
 set noswapfile
 set list
 set listchars=tab:▸\ ,trail:.,eol:\ ,nbsp:.
 set cursorline
+set cc=80
 set showbreak=↪
 " Save on focus lost
 au FocusLost * :wa
@@ -49,7 +49,6 @@ set sw=4
 set smarttab
 " Line Return
 " Make sure Vim returns to the same line when you reopen a file.
-" Thanks, Amit
 augroup line_return
     au!
     au BufReadPost *
@@ -59,7 +58,6 @@ augroup line_return
 augroup END
 " Status line
 set laststatus=2        " A status line will be used to separate windows 
-set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
 " Sane regexes
 nnoremap / /\v
 vnoremap / /\v
@@ -109,11 +107,15 @@ inoremap <C-u> <esc>gUiwea
 " Gvim
 "
 " Font for gvim
-set gfn =Monospace\ 12
+set guifont=Mensch\ for\ Powerline\ 12
 " Removes unwanted interface elements from gvim
 set guioptions-=T
 set guioptions-=m
 set guioptions-=F
+
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
 
 
 " Command for editing over FTP
