@@ -127,7 +127,7 @@ map <F3> :NERDTreeToggle<CR>
 " Tagbar.
 map <F4> :TagbarToggle<CR>
 " Yankring
-nnoremap <silent> <F11> :YRShow<CR>
+map <F6> :YRShow<CR>
 " Omnicompletion.
 inoremap <Nul> <C-x><C-o>
 autocmd FileType python set omnifunc=pythoncomplete#Complete
