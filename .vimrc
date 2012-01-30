@@ -16,6 +16,8 @@ filetype plugin on
 set encoding=utf-8
 " Mouse support
 set mouse=a
+" Plays nicely with system clipboard
+set clipboard=unnamed
 " GVim's title changes to the file I'm editing
 set title
 " No bacups are stored (I save all the time).
