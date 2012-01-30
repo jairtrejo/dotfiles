@@ -16,6 +16,8 @@ filetype plugin on
 set encoding=utf-8
 " Mouse support
 set mouse=a
+" Backspace support
+set backspace=indent,eol,start
 " Plays nicely with system clipboard
 set clipboard=unnamed
 " GVim's title changes to the file I'm editing
@@ -126,6 +128,8 @@ let g:netrw_ftp_cmd="ftp -p"
 map <F3> :NERDTreeToggle<CR>
 " Tagbar.
 map <F4> :TagbarToggle<CR>
+" Yankring
+nnoremap <silent> <F11> :YRShow<CR>
 " Omnicompletion.
 inoremap <Nul> <C-x><C-o>
 autocmd FileType python set omnifunc=pythoncomplete#Complete
