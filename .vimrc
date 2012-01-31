@@ -81,12 +81,14 @@ let g:netrw_ftp_cmd="ftp -p"
 " Sane regexes
 nnoremap / /\v
 vnoremap / /\v
-" Case sensitive search, but ignores capitalization if whole search term uses the same case.
+" Case sensitive search, but ignores capitalization if whole search
+" term uses the same case.
 set ignorecase
 set smartcase
 " Incremental search
 set incsearch
-" Keep search matches in the middle of the window and pulse the line when moving to them.
+" Keep search matches in the middle of the window and pulse the line
+" when moving to them.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 " highlight search ocurrences
@@ -188,7 +190,8 @@ au BufNewFile,BufRead forms.py     setlocal filetype=python.django
 " LaTeX
 " For LaTeX files, doesn't try to break pasted lines, however long.
 autocmd BufRead *\.tex,*\.txt,*\.mkd setlocal formatoptions=l
-" For LaTeX files, breaks lines on breakat rather than the last char that fits on screen.
+" For LaTeX files, breaks lines on breakat rather than
+" the last char that fits on screen.
 autocmd BufRead *\.tex,*\.txt,*\.mkd setlocal lbr
 
 " Markdown
