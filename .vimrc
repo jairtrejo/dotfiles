@@ -26,6 +26,9 @@ set nobackup
 set noswapfile
 " Relative line numbers (LN is displayed on the status bar)
 set relativenumber
+" change to absolute line numbers when vim loses focus.
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
 " Extraneous whitespace is displayed with special chars.
 set list
 set listchars=tab:▸\ ,trail:.,eol:\ ,nbsp:.
