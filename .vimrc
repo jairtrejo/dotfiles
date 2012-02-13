@@ -211,7 +211,7 @@ augroup END
 
 " GVim
 " Font for gvim.
-set guifont=Monaco\ for\ Powerline\ 12
+set guifont=Monaco\ for\ Powerline\ 11
 " Removes unwanted interface elements from gvim.
 set guioptions-=T
 set guioptions-=m
