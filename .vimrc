@@ -147,6 +147,8 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :TagbarToggle<CR>
 " Yankring
 map <F6> :YRShow<CR>
+" CtrlP
+let g:ctrlp_map = '<leader>t'
 
 "
 " Omnicompletion.
@@ -216,4 +218,5 @@ set guifont=Monaco\ for\ Powerline\ 11
 set guioptions-=T
 set guioptions-=m
 set guioptions-=F
+
 
