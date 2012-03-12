@@ -219,4 +219,6 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=F
 
+" Removes horrible ^ characters from the status line of active buffers.
+set fillchars+=stl:\ ,stlnc:\
 
