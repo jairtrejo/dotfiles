@@ -52,7 +52,7 @@ set t_Co=256
 " I like dark backgrounds.
 set background=dark
 " My prefered colorschema
-colorscheme Tomorrow-Night
+colorscheme badwolf
 " Nice vsplit separator
 set fillchars+=vert:│
 " Show matched parentheses
@@ -147,6 +147,8 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :TagbarToggle<CR>
 " Yankring
 map <F6> :YRShow<CR>
+" CtrlP
+let g:ctrlp_map = '<leader>t'
 
 "
 " Omnicompletion.
@@ -177,7 +179,7 @@ map <F5> :!python %<CR>
 
 " Django
 " Commands for quickly setting django type.
-nnoremap _dt :set ft=htmldjango<CR>
+nnoremap _dt :set ft=html.htmldjango<CR>
 nnoremap _pd :set ft=python.django<CR>
 " Set filetype when editing typical django files
 au BufNewFile,BufRead admin.py     setlocal filetype=python.django
@@ -216,4 +218,7 @@ set guifont=Monaco\ for\ Powerline\ 11
 set guioptions-=T
 set guioptions-=m
 set guioptions-=F
+
+" Removes horrible ^ characters from the status line of active buffers.
+set fillchars+=stl:\ ,stlnc:\ 
 
