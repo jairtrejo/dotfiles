@@ -52,7 +52,7 @@ set t_Co=256
 " I like dark backgrounds.
 set background=dark
 " My prefered colorschema
-colorscheme badwolf
+colorscheme solarized
 " Nice vsplit separator
 set fillchars+=vert:│
 " Show matched parentheses
