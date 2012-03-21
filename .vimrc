@@ -179,7 +179,7 @@ map <F5> :!python %<CR>
 
 " Django
 " Commands for quickly setting django type.
-nnoremap _dt :set ft=html.htmldjango<CR>
+nnoremap _dt :set ft=htmldjango<CR>
 nnoremap _pd :set ft=python.django<CR>
 " Set filetype when editing typical django files
 au BufNewFile,BufRead admin.py     setlocal filetype=python.django
