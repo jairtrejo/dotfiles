@@ -16,3 +16,10 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 
 alias v='gvim .'
+
+# Functions
+
+function pst () {
+    $* | discoball '"/home/.*"' '==[=]+' '\w+Error' 'line \d+' 'failures=\d+' 'errors=\d+'
+}
+
