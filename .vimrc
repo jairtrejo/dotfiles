@@ -228,5 +228,12 @@ map <Right> :echo "no!"<cr>
 map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
 
+" Yanking to system clipboard
 map Y "+y
+
+" Clam mapping
+nnoremap ! :Clam<space>
+
+" Disentangle the screen connundrum (stolen from Steve Losh):
+nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 
