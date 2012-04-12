@@ -19,7 +19,14 @@ alias v='gvim .'
 
 # Functions
 
+# Colours python stack traces.
 function pst () {
     $* | discoball '"/home/.*"' '==[=]+' '\w+Error' 'line \d+' 'failures=\d+' 'errors=\d+'
+}
+
+# I am sick and tired of writing "fab vagrant".
+
+function fv () {
+    fab vagrant $*
 }
 
