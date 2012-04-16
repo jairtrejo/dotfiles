@@ -237,3 +237,7 @@ nnoremap ! :Clam<space>
 " Disentangle the screen connundrum (stolen from Steve Losh):
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 
+" Remapping of ` and ' for easy '.
+nnoremap ' `
+nnoremap ` '
+
