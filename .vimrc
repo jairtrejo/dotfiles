@@ -199,6 +199,8 @@ autocmd BufRead *\.tex,*\.txt,*\.mkd setlocal lbr
 " Markdown
 " Automatic > section continuations for Markdown.
 autocmd BufRead *\.mkd,*\.md set ai formatoptions=tcroqn2 comments=n:&gt;
+" Mapping for setting markdown filetype (useful for scratchpad)
+nnoremap _md :set ft=markdown<CR>
 
 " Arduino
 " Set filetype to arduino for pde files.
