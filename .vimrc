@@ -212,21 +212,6 @@ augroup ft_vagrant
     au BufRead,BufNewFile Vagrantfile set ft=ruby
 augroup END
 
-" GVim
-if has('gui_running'):
-    " Font for gvim.
-    set guifont=Monaco\ for\ Powerline\ 11
-    " Removes unwanted interface elements from gvim.
-    set guioptions-=T
-    set guioptions-=m
-    set guioptions-=F
-
-
-    highlight SpellBad term=underline gui=undercurl guisp=Orange
-else
-    set mouse=a
-end
-
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
 
@@ -264,4 +249,29 @@ augroup trailing
     au InsertEnter * :set listchars-=trail:⌴
     au InsertLeave * :set listchars+=trail:⌴
 augroup END
+
+" GVim
+if has('gui_running'):
+    " Font for gvim.
+    set guifont=Monaco\ for\ Powerline\ 11
+    " Removes unwanted interface elements from gvim.
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=F
+
+
+    highlight SpellBad term=underline gui=undercurl guisp=Orange
+else
+    " Mouse support
+    set mouse=a
+    " Change cursor shape according to mode.
+    if &term =~ '^xterm'
+      " solid underscore
+      let &t_SI .= "\<Esc>[4 q"
+      " solid block
+      let &t_EI .= "\<Esc>[2 q"
+      " 1 or 0 -> blinking block
+      " 3 -> blinking underscore
+    endif
+end
 
