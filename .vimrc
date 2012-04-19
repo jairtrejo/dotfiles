@@ -251,7 +251,7 @@ augroup trailing
 augroup END
 
 " GVim
-if has('gui_running'):
+if has('gui_running')
     " Font for gvim.
     set guifont=Monaco\ for\ Powerline\ 11
     " Removes unwanted interface elements from gvim.
@@ -259,7 +259,7 @@ if has('gui_running'):
     set guioptions-=m
     set guioptions-=F
 
-
+    " Better looking error highlighting
     highlight SpellBad term=underline gui=undercurl guisp=Orange
 else
     " Mouse support
