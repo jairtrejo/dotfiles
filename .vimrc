@@ -23,8 +23,6 @@ filetype indent on
 "
 " Default encoding
 set encoding=utf-8
-" Mouse support
-set mouse=a
 " Backspace support
 set backspace=indent,eol,start
 " Window title changes to the file I'm editing
@@ -51,7 +49,7 @@ au FocusLost * :wa
 set t_Co=256
 " I like dark backgrounds.
 set background=dark
-" My prefered colorschema
+" My prefered colorscheme
 colorscheme solarized
 " Nice vsplit separator
 set fillchars+=vert:│
@@ -102,6 +100,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 set wildmode=list:full
 set wildmenu
 set wildignore+=*.pyc
+set wildignore+=migrations
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
@@ -214,12 +213,19 @@ augroup ft_vagrant
 augroup END
 
 " GVim
-" Font for gvim.
-set guifont=Monaco\ for\ Powerline\ 11
-" Removes unwanted interface elements from gvim.
-set guioptions-=T
-set guioptions-=m
-set guioptions-=F
+if has('gui_running'):
+    " Font for gvim.
+    set guifont=Monaco\ for\ Powerline\ 11
+    " Removes unwanted interface elements from gvim.
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=F
+
+
+    highlight SpellBad term=underline gui=undercurl guisp=Orange
+else
+    set mouse=a
+end
 
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
@@ -242,4 +248,20 @@ nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 " Remapping of ` and ' for easy '.
 nnoremap ' `
 nnoremap ` '
+
+" Only show cursorline in the current window and in normal mode.
+augroup cline
+    au!
+    au WinLeave * set nocursorline
+    au WinEnter * set cursorline
+    au InsertEnter * set nocursorline
+    au InsertLeave * set cursorline
+augroup END
+
+" Trailing whitespace only shown when not in insert mode so I don't go insane.
+augroup trailing
+    au!
+    au InsertEnter * :set listchars-=trail:⌴
+    au InsertLeave * :set listchars+=trail:⌴
+augroup END
 
