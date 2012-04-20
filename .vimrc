@@ -264,14 +264,5 @@ if has('gui_running')
 else
     " Mouse support
     set mouse=a
-    " Change cursor shape according to mode.
-    if &term =~ '^xterm'
-      " solid underscore
-      let &t_SI .= "\<Esc>[4 q"
-      " solid block
-      let &t_EI .= "\<Esc>[2 q"
-      " 1 or 0 -> blinking block
-      " 3 -> blinking underscore
-    endif
 end
 
