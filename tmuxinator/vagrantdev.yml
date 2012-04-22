@@ -5,7 +5,7 @@ project_root: ~/src/
 pre: export TERM=screen-256color-bce
 tabs:
   - editor:
-      layout: main-vertical
+      layout: 6d6c,142x54,0,0{90x54,0,0,51x54,91,0[51x26,91,0,51x27,91,27]}
       panes:
         - vim
         - #empty, will just run plain bash
