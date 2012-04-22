@@ -26,8 +26,10 @@ function pst () {
 }
 
 # I am sick and tired of writing "fab vagrant".
-
 function fv () {
     fab vagrant $*
 }
+
+# Environment variables
+export EDITOR="vim"
 
