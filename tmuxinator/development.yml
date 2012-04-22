@@ -2,6 +2,7 @@
 
 project_name: Development
 project_root: ~/src/digalo-con-python
+pre: export TERM=screen-256color-bce
 tabs:
   - editor:
       layout: main-vertical
