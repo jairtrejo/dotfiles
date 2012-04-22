@@ -1,0 +1,84 @@
+[submodule "vim/bundle/badwolf"]
+	path = vim/bundle/badwolf
+	url = https://github.com/sjl/badwolf.git
+[submodule "vim/bundle/clam.vim"]
+	path = vim/bundle/clam.vim
+	url = https://github.com/sjl/clam.vim.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/django.vim"]
+	path = vim/bundle/django.vim
+	url = https://github.com/vim-scripts/django.vim.git
+[submodule "vim/bundle/JavaScript-Indent"]
+	path = vim/bundle/JavaScript-Indent
+	url = https://github.com/vim-scripts/JavaScript-Indent.git
+[submodule "vim/bundle/jshint.vim"]
+	path = vim/bundle/jshint.vim
+	url = https://github.com/walm/jshint.vim.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/pydoc.vim"]
+	path = vim/bundle/pydoc.vim
+	url = https://github.com/fs111/pydoc.vim.git
+[submodule "vim/bundle/pyflakes-pathogen"]
+	path = vim/bundle/pyflakes-pathogen
+	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule "vim/bundle/snipmate_for_django"]
+	path = vim/bundle/snipmate_for_django
+	url = https://github.com/robhudson/snipmate_for_django.git
+[submodule "vim/bundle/snipmate.vim"]
+	path = vim/bundle/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/bundle/tcomment_vim"]
+	path = vim/bundle/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "vim/bundle/tslime.vim"]
+	path = vim/bundle/tslime.vim
+	url = https://github.com/kikijump/tslime.vim.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-easymotion"]
+	path = vim/bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim/bundle/vim-five.git"]
+	path = vim/bundle/vim-five.git
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/vim-indent-object"]
+	path = vim/bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "vim/bundle/vim-javascript-syntax"]
+	path = vim/bundle/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/vim-pep8"]
+	path = vim/bundle/vim-pep8
+	url = https://github.com/jbking/vim-pep8.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/vim-scratch"]
+	path = vim/bundle/vim-scratch
+	url = https://github.com/duff/vim-scratch.git
+[submodule "vim/bundle/vim-smartinput"]
+	path = vim/bundle/vim-smartinput
+	url = https://github.com/kana/vim-smartinput.git
+[submodule "vim/bundle/vim-sparkup"]
+	path = vim/bundle/vim-sparkup
+	url = https://github.com/bingaman/vim-sparkup.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vimux"]
+	path = vim/bundle/vimux
+	url = https://github.com/benmills/vimux.git
+[submodule "vim/bundle/vim-yankring"]
+	path = vim/bundle/vim-yankring
+	url = https://github.com/chrismetcalf/vim-yankring.git
