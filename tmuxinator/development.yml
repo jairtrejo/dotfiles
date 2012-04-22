@@ -5,8 +5,7 @@ project_root: ~/src/digalo-con-python
 pre: export TERM=screen-256color-bce
 tabs:
   - editor:
-      layout: main-vertical
+      layout: main-horizontal
       panes:
         - vim
         - #empty, will just run plain bash
-        - vagrant ssh

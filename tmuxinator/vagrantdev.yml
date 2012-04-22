@@ -1,0 +1,13 @@
+# ~/.tmuxinator/vagrantdev.yml
+
+project_name: Vagrant development
+project_root: ~/src/
+pre: export TERM=screen-256color-bce
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - #empty, will just run plain bash
+        - vagrant up && vagrant ssh
+
