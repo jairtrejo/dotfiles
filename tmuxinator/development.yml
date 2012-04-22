@@ -1,7 +1,7 @@
 # ~/.tmuxinator/development.yml
-# you can make as many tabs as you wish...
 
 project_name: Development
+project_root: ~/src/digalo-con-python
 tabs:
   - editor:
       layout: main-vertical
