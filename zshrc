@@ -16,7 +16,8 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 
 alias v='gvim .'
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux='TERM=screen-256color-bce tmux'
+alias effuse='effuse --prefix="."'
 
 # Functions
 
