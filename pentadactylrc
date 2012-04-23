@@ -1,0 +1,9 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+colorscheme molokai
+map -modes=n,v gR -ex :open readnow
+map -modes=n,v gH -ex :open ghub
+
+" vim: set ft=pentadactyl:
