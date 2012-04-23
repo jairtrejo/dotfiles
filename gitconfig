@@ -1,0 +1,39 @@
+[user]
+  name = Jair Trejo
+  email = jair@jairtrejo.mx
+
+[giggle]
+  main-window-maximized = true
+  main-window-geometry = 493x269+2573+119
+  history-view-vpane-position = 521
+  file-view-vpane-position = 646
+  main-window-view = FileView
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+
+[github]
+  user = jairtrejo
+
+[alias]
+  co = checkout
+  st = status
+
