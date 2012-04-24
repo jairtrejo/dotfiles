@@ -250,6 +250,9 @@ augroup trailing
     au InsertLeave * :set listchars+=trail:⌴
 augroup END
 
+" Better looking error highlighting
+highlight SpellBad term=underline gui=undercurl guisp=Orange
+
 " GVim
 if has('gui_running')
     " Font for gvim.
@@ -259,8 +262,6 @@ if has('gui_running')
     set guioptions-=m
     set guioptions-=F
 
-    " Better looking error highlighting
-    highlight SpellBad term=underline gui=undercurl guisp=Orange
 else
     " Mouse support
     set mouse=a
