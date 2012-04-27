@@ -2,13 +2,6 @@
   name = Jair Trejo
   email = jair@jairtrejo.mx
 
-[giggle]
-  main-window-maximized = true
-  main-window-geometry = 493x269+2573+119
-  history-view-vpane-position = 521
-  file-view-vpane-position = 646
-  main-window-view = FileView
-
 [color]
   branch = auto
   diff = auto
