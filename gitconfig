@@ -29,4 +29,5 @@
 [alias]
   co = checkout
   st = status
+  l = !zsh -c 'source ~/.githelpers && pretty_git_log'
 
