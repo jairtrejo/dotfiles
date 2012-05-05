@@ -18,6 +18,7 @@ source $ZSH/oh-my-zsh.sh
 alias v='gvim .'
 alias tmux='TERM=screen-256color-bce tmux'
 alias effuse='effuse --prefix="."'
+alias ls='ls -G'
 
 # Functions
 
