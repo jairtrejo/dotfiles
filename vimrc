@@ -256,7 +256,7 @@ highlight SpellBad term=underline gui=undercurl guisp=Orange
 " GVim
 if has('gui_running')
     " Font for gvim.
-    set guifont=Monaco\ for\ Powerline\ 11
+    set guifont=Monaco\ for\ Powerline:h13
     " Removes unwanted interface elements from gvim.
     set guioptions-=T
     set guioptions-=m
