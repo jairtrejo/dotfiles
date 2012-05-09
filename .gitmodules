@@ -82,3 +82,6 @@
 [submodule "vim/bundle/vim-yankring"]
 	path = vim/bundle/vim-yankring
 	url = https://github.com/chrismetcalf/vim-yankring.git
+[submodule "vim/bundle/jpythonfold.vim"]
+	path = vim/bundle/jpythonfold.vim
+	url = https://github.com/vim-scripts/jpythonfold.vim.git
