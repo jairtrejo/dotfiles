@@ -261,6 +261,7 @@ if has('gui_running')
     set guioptions-=T
     set guioptions-=m
     set guioptions-=F
+    set guioptions-=R
 
 else
     " Mouse support
