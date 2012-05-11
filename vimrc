@@ -253,6 +253,9 @@ augroup END
 " Better looking error highlighting
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
+" PEP8 ignore line too long.
+let g:pep8_ignore="E501"
+
 " GVim
 if has('gui_running')
     " Font for gvim.
