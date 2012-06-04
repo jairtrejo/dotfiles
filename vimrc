@@ -130,9 +130,6 @@ noremap j gj
 noremap k gk
 noremap <Up> gk
 noremap <Down> gj
-" Change case with Ctrl + U.
-nnoremap <C-u> gUiw
-inoremap <C-u> <esc>gUiwea
 " Easier use of tabs.
 map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
