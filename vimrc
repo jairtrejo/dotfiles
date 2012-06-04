@@ -131,10 +131,10 @@ noremap k gk
 noremap <Up> gk
 noremap <Down> gj
 " Easier use of tabs.
-map <silent><A-Right> :tabnext<CR>
-map <silent><A-Left> :tabprevious<CR>
-map <silent><A-Up> :tabnew<CR>
-map <silent><A-Down> :tabclose<CR>
+map <silent><Right> :tabnext<CR>
+map <silent><Left> :tabprevious<CR>
+map <silent><Up> :tabnew<CR>
+map <silent><Down> :tabclose<CR>
 " Remap para easy-motion.
 let g:EasyMotion_leader_key = ','
 " NERDTree.
@@ -211,12 +211,6 @@ augroup END
 
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
-
-" Disable arrow keys
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
 
 " Yanking to system clipboard
 map Y "+y
