@@ -116,6 +116,8 @@ let g:Powerline_symbols = 'fancy'
 "
 " Remaps
 "
+" Leader key remap
+let mapleader = "ñ"
 " Reselect text that was just pasted
 map ,v V`]
 " Select (charwise) the contents of the current line, excluding indentation.
