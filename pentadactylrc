@@ -4,7 +4,8 @@ loadplugins '\.(js|penta)$'
 group user
 colorscheme molokai
 map -modes=n,v gR -ex :open readnow
-map -modes=n,v gH -ex :open ghub
+map -modes=n,v gH -ex :open github
+map -modes=n,v gH -ex :open pocket
 map -modes=n,v gL -ex :open http://localhost:8000
 map -builtin j 3j
 map -builtin k 3k
