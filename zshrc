@@ -35,4 +35,5 @@ function fv () {
 # Environment variables
 export EDITOR="vim"
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+export LESSCHARSET=UTF-8
 
