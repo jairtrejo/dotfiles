@@ -20,7 +20,7 @@
     login_shell = True
     cursor_shape = underline
     use_system_font = False
-    cursor_color = "#eee8d6"
+    cursor_color = "#fdf6e3"
     foreground_color = "#eee8d5"
     show_titlebar = False
     font = Monaco for Powerline 11
