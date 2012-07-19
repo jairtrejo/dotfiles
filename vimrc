@@ -220,6 +220,9 @@ map Y "+y
 " Clam mapping
 nnoremap ! :Clam<space>
 
+" Mapping para vimux
+map ññ :RunLastVimTmuxCommand<CR>
+
 " Disentangle the screen connundrum (stolen from Steve Losh):
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 
