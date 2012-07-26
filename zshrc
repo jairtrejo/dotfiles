@@ -17,9 +17,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias v='gvim .'
 if [[ `uname` == 'Darwin' ]]; then
-    alias tmux='TERM=xterm-256color tmux'
+    alias tmux='TERM=xterm-256color tmux -u'
 else
-    alias tmux='TERM=screen-256color-bce tmux'
+    alias tmux='TERM=screen-256color-bce tmux -u'
 fi
 alias effuse='effuse --prefix="."'
 alias ls='ls -G'
