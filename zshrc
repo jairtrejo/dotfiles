@@ -16,7 +16,11 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 
 alias v='gvim .'
-alias tmux='TERM=screen-256color-bce tmux'
+if [[ `uname` == 'Darwin' ]]; then
+    alias tmux='TERM=xterm-256color tmux'
+else
+    alias tmux='TERM=screen-256color-bce tmux'
+fi
 alias effuse='effuse --prefix="."'
 alias ls='ls -G'
 alias ssh='TERM=xterm-256color ssh'
