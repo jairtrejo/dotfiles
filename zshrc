@@ -18,6 +18,7 @@ source $ZSH/oh-my-zsh.sh
 alias v='gvim .'
 if [[ `uname` == 'Darwin' ]]; then
     alias tmux='TERM=xterm-256color tmux -u'
+    alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 else
     alias tmux='TERM=screen-256color-bce tmux -u'
 fi
