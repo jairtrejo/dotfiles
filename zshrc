@@ -23,7 +23,7 @@ else
     alias tmux='TERM=screen-256color-bce tmux -u'
 fi
 alias effuse='effuse --prefix="."'
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 alias ssh='TERM=xterm-256color ssh'
 
 # Functions
