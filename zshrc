@@ -19,11 +19,12 @@ alias v='gvim .'
 if [[ `uname` == 'Darwin' ]]; then
     alias tmux='TERM=xterm-256color tmux -u'
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+    alias ls='ls -G'
 else
     alias tmux='TERM=screen-256color-bce tmux -u'
+    alias ls='ls -G --color=auto'
 fi
 alias effuse='effuse --prefix="."'
-alias ls='ls -G --color=auto'
 alias ssh='TERM=xterm-256color ssh'
 
 # Functions
