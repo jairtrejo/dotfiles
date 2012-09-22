@@ -43,4 +43,6 @@ function fv () {
 export EDITOR="vim"
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export LESSCHARSET=UTF-8
-
+if [[ `uname` == 'Darwin' ]]; then
+    export PATH=$PATH:/Applications/Mozart.app/Contents/Resources/bin
+fi
