@@ -91,3 +91,6 @@
 [submodule "vim/bundle/jellybeans.vim"]
 	path = vim/bundle/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vim/bundle/scala-vim-support"]
+	path = vim/bundle/scala-vim-support
+	url = https://github.com/rosstimson/scala-vim-support.git
