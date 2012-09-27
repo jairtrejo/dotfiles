@@ -20,6 +20,7 @@ if [[ `uname` == 'Darwin' ]]; then
     alias tmux='TERM=xterm-256color tmux -u'
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
     alias ls='ls -G'
+    alias octave='exec "/Applications/Octave.app/Contents/Resources/bin/octave"'
 else
     alias tmux='TERM=screen-256color-bce tmux -u'
     alias ls='ls -G --color=auto'
