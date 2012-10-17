@@ -215,9 +215,6 @@ augroup END
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
 
-" Yanking to system clipboard
-map Y "+y
-
 " Clam mapping
 nnoremap ! :Clam<space>
 
