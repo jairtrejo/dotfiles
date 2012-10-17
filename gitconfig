@@ -34,3 +34,5 @@
 [i18n]
   logoutputencoding = UTF-8
   commitencoding = UTF-8
+[diff]
+  tool = meld
