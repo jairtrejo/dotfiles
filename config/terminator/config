@@ -23,7 +23,7 @@
     cursor_color = "#fdf6e3"
     foreground_color = "#eee8d5"
     show_titlebar = False
-    font = Monaco for Powerline 11
+    font = Source Code Pro for Powerline 14
     background_color = "#002b36"
     scrollback_infinite = True
   [[solarized-ight]]
