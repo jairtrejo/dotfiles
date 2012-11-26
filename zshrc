@@ -46,4 +46,5 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export LESSCHARSET=UTF-8
 if [[ `uname` == 'Darwin' ]]; then
     export PATH=$PATH:/Applications/Mozart.app/Contents/Resources/bin
+    export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 fi
