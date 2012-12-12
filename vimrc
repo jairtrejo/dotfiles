@@ -218,8 +218,13 @@ set fillchars+=stl:\ ,stlnc:\
 " Clam mapping
 nnoremap ! :Clam<space>
 
-" Mapping para vimux
+" Mapping for vimux
 map ññ :RunLastVimTmuxCommand<CR>
+
+" Configuration for vimux-nose
+let g:NoseVirtualenv = 'env/bin/activate'
+map ñf :RunFocusedNoseTests<CR>
+map ña :RunAllNoseTests<CR>
 
 " Disentangle the screen connundrum (stolen from Steve Losh):
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
