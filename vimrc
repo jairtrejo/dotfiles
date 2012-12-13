@@ -101,6 +101,7 @@ set wildmode=list:full
 set wildmenu
 set wildignore+=*.pyc
 set wildignore+=migrations
+set wildignore+=env
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
