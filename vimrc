@@ -176,6 +176,8 @@ let php_htmlInStrings=1
 let python_highlight_all = 1
 " Run current file through python interpreter.
 map <F5> :!python %<CR>
+" Strips whitespace from files before saving.
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 " Django
 " Commands for quickly setting django type.
@@ -212,6 +214,10 @@ augroup ft_vagrant
     au!
     au BufRead,BufNewFile Vagrantfile set ft=ruby
 augroup END
+
+" HTML
+" Prevent vim from reindenting previous line
+autocmd FileType html setlocal indentkeys-=*<Return>
 
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
