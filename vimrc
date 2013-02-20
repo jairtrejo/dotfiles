@@ -100,7 +100,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 set wildmode=list:full
 set wildmenu
 set wildignore+=*.pyc
-set wildignore+=migrations
+set wildignore+=migrations,env
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
