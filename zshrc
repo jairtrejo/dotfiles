@@ -48,3 +48,6 @@ if [[ `uname` == 'Darwin' ]]; then
     export PATH=$PATH:/Applications/Mozart.app/Contents/Resources/bin
     export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/jair/.gvm/bin/gvm-init.sh" ]] && source "/Users/jair/.gvm/bin/gvm-init.sh"
