@@ -100,6 +100,3 @@
 [submodule "vim/bundle/vimux-nose-test"]
 	path = vim/bundle/vimux-nose-test
 	url = https://github.com/pitluga/vimux-nose-test.git
-[submodule "vim/bundle/javascript-libraries-syntax.vim"]
-	path = vim/bundle/javascript-libraries-syntax.vim
-	url = git@github.com:othree/javascript-libraries-syntax.vim.git
