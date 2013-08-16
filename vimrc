@@ -219,6 +219,11 @@ augroup END
 " Prevent vim from reindenting previous line
 autocmd FileType html setlocal indentkeys-=*<Return>
 
+" Clojure
+" Fireplace mappings
+autocmd FileType clojure nnoremap <C-e> :Eval<CR>
+autocmd FileType clojure nnoremap E :%Eval<CR>
+
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
 
