@@ -106,3 +106,6 @@
 [submodule "vim/bundle/vim-fireplace"]
 	path = vim/bundle/vim-fireplace
 	url = git://github.com/tpope/vim-fireplace.git
+[submodule "vim/bundle/brolink.vim"]
+	path = vim/bundle/brolink.vim
+	url = git://github.com/jaxbot/brolink.vim.git
