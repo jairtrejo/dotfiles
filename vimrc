@@ -102,6 +102,8 @@ set wildmenu
 set wildignore+=*.pyc
 set wildignore+=migrations
 set wildignore+=env,virtualenv
+set wildignore+=htmlcov
+set wildignore+=node_modules
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
