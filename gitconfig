@@ -36,3 +36,5 @@
   commitencoding = UTF-8
 [diff]
   tool = meld
+[push]
+	default = simple
