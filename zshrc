@@ -46,8 +46,11 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export LESSCHARSET=UTF-8
 if [[ `uname` == 'Darwin' ]]; then
     export PATH=$PATH:/Applications/Mozart.app/Contents/Resources/bin
+    export PATH=$PATH:/Users/jair/src/lib/arcanist/bin
     export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 fi
+
+source /Users/jair/src/lib/arcanist/resources/shell/bash-completion
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/jair/.gvm/bin/gvm-init.sh" ]] && source "/Users/jair/.gvm/bin/gvm-init.sh"
