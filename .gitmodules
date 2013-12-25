@@ -112,3 +112,6 @@
 [submodule "vim/bundle/pytest.vim"]
 	path = vim/bundle/pytest.vim
 	url = git@github.com:alfredodeza/pytest.vim.git
+[submodule "vim/bundle/vim-vinegar"]
+	path = vim/bundle/vim-vinegar
+	url = git@github.com:tpope/vim-vinegar.git
