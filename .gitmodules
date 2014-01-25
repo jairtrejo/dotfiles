@@ -115,3 +115,6 @@
 [submodule "vim/bundle/vim-vinegar"]
 	path = vim/bundle/vim-vinegar
 	url = git@github.com:tpope/vim-vinegar.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = git://github.com/jnwhiteh/vim-golang.git
