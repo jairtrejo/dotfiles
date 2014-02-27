@@ -118,3 +118,9 @@
 [submodule "vim/bundle/vim-golang"]
 	path = vim/bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "paredit.vim"]
+	path = paredit.vim
+	url = git@github.com:vim-scripts/paredit.vim.git
+[submodule "vim/bundle/paredit.vim"]
+	path = vim/bundle/paredit.vim
+	url = git@github.com:vim-scripts/paredit.vim.git
