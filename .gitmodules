@@ -61,9 +61,6 @@
 [submodule "vim/bundle/vim-pep8"]
 	path = vim/bundle/vim-pep8
 	url = https://github.com/jbking/vim-pep8.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/vim-scratch"]
 	path = vim/bundle/vim-scratch
 	url = https://github.com/duff/vim-scratch.git
