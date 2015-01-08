@@ -94,9 +94,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/vimux-nose-test"]
-	path = vim/bundle/vimux-nose-test
-	url = https://github.com/pitluga/vimux-nose-test.git
 [submodule "vim/bundle/vim-clojure-static"]
 	path = vim/bundle/vim-clojure-static
 	url = git@github.com:guns/vim-clojure-static.git
