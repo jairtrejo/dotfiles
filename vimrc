@@ -120,7 +120,7 @@ let g:Powerline_symbols = 'fancy'
 " Remaps
 "
 " Leader key remap
-let mapleader = "ñ"
+let mapleader = ";"
 " Reselect text that was just pasted
 map ,v V`]
 " Select (charwise) the contents of the current line, excluding indentation.
@@ -233,7 +233,8 @@ set fillchars+=stl:\ ,stlnc:\
 nnoremap ! :Clam<space>
 
 " Mapping for vimux
-map ññ :RunLastVimTmuxCommand<CR>
+map ;p :VimuxPromptCommand<CR>
+map ;; :VimuxRunLastCommand<CR>
 
 " Disentangle the screen connundrum (stolen from Steve Losh):
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
