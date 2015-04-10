@@ -111,10 +111,10 @@ set wildignore+=*.jpg,*.png,*.gif
 "
 " Status line
 "
-" Show status line
 set laststatus=2
-" Powerline with fancy symbols.
-let g:Powerline_symbols = 'fancy'
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 "
 " Remaps
@@ -264,6 +264,9 @@ highlight SpellBad term=underline gui=undercurl guisp=Orange
 
 " PEP8 ignore line too long.
 let g:pep8_ignore="E501"
+
+" The silver searcher with ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " GVim
 if has('gui_running')
