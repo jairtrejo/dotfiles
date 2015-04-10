@@ -22,9 +22,6 @@
 [submodule "vim/bundle/pydoc.vim"]
 	path = vim/bundle/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "vim/bundle/pyflakes-pathogen"]
-	path = vim/bundle/pyflakes-pathogen
-	url = https://github.com/mitechie/pyflakes-pathogen.git
 [submodule "vim/bundle/snipmate_for_django"]
 	path = vim/bundle/snipmate_for_django
 	url = https://github.com/robhudson/snipmate_for_django.git
@@ -58,9 +55,6 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "vim/bundle/vim-pep8"]
-	path = vim/bundle/vim-pep8
-	url = https://github.com/jbking/vim-pep8.git
 [submodule "vim/bundle/vim-scratch"]
 	path = vim/bundle/vim-scratch
 	url = https://github.com/duff/vim-scratch.git
@@ -124,3 +118,6 @@
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = git@github.com:groenewege/vim-less.git
+[submodule "vim/bundle/vim-flake8"]
+	path = vim/bundle/vim-flake8
+	url = git@github.com:nvie/vim-flake8.git
