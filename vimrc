@@ -1,3 +1,4 @@
+scriptencoding utf-8
 "
 " .vimrc
 "
@@ -50,7 +51,7 @@ set t_Co=256
 " I like dark backgrounds.
 set background=dark
 " My prefered colorscheme
-colorscheme jellybeans
+colorscheme Tomorrow-Night
 " Nice vsplit separator
 set fillchars+=vert:│
 " Show matched parentheses
@@ -103,18 +104,17 @@ set wildignore+=*.pyc
 set wildignore+=migrations
 set wildignore+=env,virtualenv
 set wildignore+=htmlcov
-set wildignore+=node_modules
+set wildignore+=node_modules,bower_components,build
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
+set wildignore+=TwitterKit.framework,TwitterCore.framework
 
 "
 " Status line
 "
 set laststatus=2
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+set rtp+=/Users/jair/.pyenv/versions/default/lib/python2.7/site-packages/powerline/bindings/vim
 
 "
 " Remaps
@@ -155,7 +155,6 @@ let g:ctrlp_map = '<leader>t'
 " Omnicompletion.
 "
 inoremap <Nul> <C-x><C-o>
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -180,6 +179,10 @@ let python_highlight_all = 1
 map <F5> :!python %<CR>
 " Strips whitespace from files before saving.
 autocmd BufWritePre *.py :%s/\s\+$//e
+" Folding
+let g:SimpylFold_docstring_preview = 1
+" Jedi vim
+let g:jedi#use_tabs_not_buffers = 1
 
 " Django
 " Commands for quickly setting django type.
@@ -226,6 +229,10 @@ autocmd FileType html setlocal indentkeys-=*<Return>
 autocmd FileType clojure nnoremap <C-e> :Eval<CR>
 autocmd FileType clojure nnoremap E :%Eval<CR>
 
+" JSX
+" All files
+let g:jsx_ext_required = 0
+
 " Removes horrible ^ characters from the status line of active buffers.
 set fillchars+=stl:\ ,stlnc:\ 
 
@@ -243,6 +250,12 @@ nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
 nnoremap ' `
 nnoremap ` '
 
+" Quickfix and location list navigation
+map ]l :lnext<CR>
+map [l :lprev<CR>
+map ]q :cnext<CR>
+map [q :cprev<CR>
+
 " Only show cursorline in the current window and in normal mode.
 augroup cline
     au!
@@ -255,18 +268,27 @@ augroup END
 " Trailing whitespace only shown when not in insert mode so I don't go insane.
 augroup trailing
     au!
-    au InsertEnter * :set listchars-=trail:⌴
-    au InsertLeave * :set listchars+=trail:⌴
+    au InsertEnter * :set listchars-=trail:.
+    au InsertLeave * :set listchars+=trail:.
 augroup END
 
 " Better looking error highlighting
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
-" PEP8 ignore line too long.
-let g:pep8_ignore="E501"
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers = []
 
 " The silver searcher with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Goyo + Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " GVim
 if has('gui_running')
@@ -289,4 +311,3 @@ else
         map! <Esc>OF <End>
     endif
 end
-

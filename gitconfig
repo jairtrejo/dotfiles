@@ -1,6 +1,7 @@
 [user]
   name = Jair Trejo
-  email = jair@jairtrejo.mx
+	email = jair@chegg.com
+	signingkey = 36515C1E
 
 [color]
   branch = auto

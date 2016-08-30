@@ -16,7 +16,7 @@ show_git_head() {
 }
 
 pretty_git_log() {
-    git log --graph --pretty="tformat:${FORMAT}" $* |
+    git log --pretty="tformat:${FORMAT}" $* |
         # Line columns up based on } delimiter
         column -s '}' -t |
         # Page only if we need to
