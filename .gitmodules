@@ -31,9 +31,6 @@
 [submodule "vim/bundle/tcomment_vim"]
 	path = vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
-[submodule "vim/bundle/tslime.vim"]
-	path = vim/bundle/tslime.vim
-	url = https://github.com/kikijump/tslime.vim.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
