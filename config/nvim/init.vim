@@ -1,23 +1,29 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-vinegar'
+Plug 'b4winckler/vim-objc'
 Plug 'benmills/vimux'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'cohama/lexima.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'gavocanov/vim-js-indent'
+Plug 'jimmyhchan/dustjs.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mattn/emmet-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
+Plug 'motus/pig.vim'
+Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'rschmukler/pangloss-vim-indent'
-Plug 'mxw/vim-jsx'
-Plug 'gavocanov/vim-js-indent'
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'cohama/lexima.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'b4winckler/vim-objc'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/django.vim'
 call plug#end()
 
@@ -71,8 +77,8 @@ set laststatus=2
 set mouse=a
 " Color scheme
 set background=dark
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+colorscheme deep-space
+let g:airline_theme='deep_space'
 if (has("termguicolors"))
     set termguicolors
 endif
@@ -86,7 +92,7 @@ set wildignore+=*.pyc
 set wildignore+=migrations
 set wildignore+=env,virtualenv
 set wildignore+=htmlcov
-set wildignore+=node_modules,bower_components,build
+set wildignore+=node_modules,bower_components,build,public,payments-frontend/public
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
@@ -147,13 +153,31 @@ map ]q :cnext<CR>
 map [q :cprev<CR>
 
 "
+" Language specific
+"
+" JavaScript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
+"
 " Plugin specific
 "
 " Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep --no-heading'
+    nnoremap <leader>a :Ack<space>
+    nnoremap <leader>as :Ack<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
+    nnoremap <leader>aj :Ack<space>-tjs<space>
+    nnoremap <leader>ap :Ack<space>-tscala<space>-tpy<space>
+    nnoremap <leader>at :Ack<space>-g<space>'*.tl'<space>
+else
+    let g:ackprg = 'ag --vimgrep'
+    nnoremap <leader>a :Ack<space>
+    nnoremap <leader>as :Ack<space>--sass<space>--less<space>--css<space>
+    nnoremap <leader>aj :Ack<space>--js<space>
+    nnoremap <leader>ap :Ack<space>--scala<space>
+    nnoremap <leader>at :Ack<space>-G<space>'.tl'<space>
 endif
-nnoremap <leader>a :Ack<space>
+
 " fzf
 nnoremap <leader>t :FZF<enter>
 " Mapping for vimux
