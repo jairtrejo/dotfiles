@@ -8,6 +8,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'gavocanov/vim-js-indent'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'michaeljsmith/vim-indent-object'
@@ -25,6 +26,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/django.vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 "
@@ -157,6 +159,7 @@ map [q :cprev<CR>
 "
 " JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin
 
 "
 " Plugin specific
@@ -164,14 +167,14 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 " Ack
 if executable('rg')
     let g:ackprg = 'rg --vimgrep --no-heading'
-    nnoremap <leader>a :Ack<space>
+    nnoremap <leader>aa :Ack<space>
     nnoremap <leader>as :Ack<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
     nnoremap <leader>aj :Ack<space>-tjs<space>
     nnoremap <leader>ap :Ack<space>-tscala<space>-tpy<space>
     nnoremap <leader>at :Ack<space>-g<space>'*.tl'<space>
 else
     let g:ackprg = 'ag --vimgrep'
-    nnoremap <leader>a :Ack<space>
+    nnoremap <leader>aa :Ack<space>
     nnoremap <leader>as :Ack<space>--sass<space>--less<space>--css<space>
     nnoremap <leader>aj :Ack<space>--js<space>
     nnoremap <leader>ap :Ack<space>--scala<space>
