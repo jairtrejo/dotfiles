@@ -33,8 +33,8 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export LESSCHARSET=UTF-8
 export FZF_DEFAULT_COMMAND='ag -g ""'
 if [[ `uname` == 'Darwin' ]]; then
-    export PATH=/usr/local/bin:/usr/local/opt/android-sdk/build-tools/:$PATH
     export ANDROID_HOME=/Users/jair/Library/Android/sdk
+    export PATH=/usr/local/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 fi
 
 # PyEnv
