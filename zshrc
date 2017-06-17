@@ -54,3 +54,4 @@ if [[ "$(ps -o command= $$)" =~ bash\ -ilc\ env &&
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(direnv hook zsh)"
