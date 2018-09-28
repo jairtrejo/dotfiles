@@ -39,3 +39,5 @@
   tool = meld
 [push]
 	default = simple
+[core]
+	excludesfile = /Users/jair/.gitignore

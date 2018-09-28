@@ -27,6 +27,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/django.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mhinz/vim-grepper'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 
 "
@@ -163,6 +168,9 @@ map [q :cprev<CR>
 " JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --parser\ babylon
+" Python
+let g:python2_host_prog = '/Users/jair/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/jair/.pyenv/versions/neovim3/bin/python'
 
 "
 " Plugin specific
@@ -181,15 +189,24 @@ let $FZF_DEFAULT_COMMAND= 'rg --files --follow'
 " Mapping for vimux
 nnoremap <leader>p :VimuxPromptCommand<CR>
 nnoremap <leader><leader> :VimuxRunLastCommand<CR>
+
 " Neomake
 autocmd! BufWritePost * Neomake
 autocmd! VimLeave *.js  !eslint_d stop
 let g:neomake_javascript_enabled_makers = ['eslint_d']
 let g:neomake_jsx_enabled_makers = ['eslint_d']
-let g:neomake_error_sign = {'texthl': 'Error', 'text': '✕ '}
-
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_error_sign = {
+    \ 'text': '✖',
+    \ 'texthl': 'ErrorMsg'
+    \ }
+let g:neomake_warning_sign = {
+    \ 'text': '!',
+    \ 'texthl': 'ErrorMsg'
+    \ }
 set autoread
 au User NeomakeFinished checktime
+
 " vim-jsx
 let g:jsx_ext_required = 0
 " airline
