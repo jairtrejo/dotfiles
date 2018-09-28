@@ -31,7 +31,7 @@ export LANG=en_US.UTF-8
 export EDITOR="vim"
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export LESSCHARSET=UTF-8
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 if [[ `uname` == 'Darwin' ]]; then
     export ANDROID_HOME=/Users/jair/Library/Android/sdk
     export PATH=/usr/local/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH

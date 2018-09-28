@@ -12,7 +12,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'mileszs/ack.vim'
 Plug 'motus/pig.vim'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
@@ -27,6 +26,7 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/django.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'mhinz/vim-grepper'
 call plug#end()
 
 "
@@ -78,12 +78,14 @@ set laststatus=2
 " Mouse support
 set mouse=a
 " Color scheme
+if (has("termguicolors"))
+    set termguicolors
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+endif
 set background=dark
 colorscheme deep-space
 let g:airline_theme='deep_space'
-if (has("termguicolors"))
-    set termguicolors
-endif
 
 "
 " Wildmenu
@@ -99,6 +101,7 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.jpg,*.png,*.gif
 set wildignore+=TwitterKit.framework,TwitterCore.framework
+set wildignore+=.idea
 
 "
 " Search
@@ -159,30 +162,22 @@ map [q :cprev<CR>
 "
 " JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin
+autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --parser\ babylon
 
 "
 " Plugin specific
 "
-" Ack
-if executable('rg')
-    let g:ackprg = 'rg --vimgrep --no-heading'
-    nnoremap <leader>aa :Ack<space>
-    nnoremap <leader>as :Ack<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
-    nnoremap <leader>aj :Ack<space>-tjs<space>
-    nnoremap <leader>ap :Ack<space>-tscala<space>-tpy<space>
-    nnoremap <leader>at :Ack<space>-g<space>'*.tl'<space>
-else
-    let g:ackprg = 'ag --vimgrep'
-    nnoremap <leader>aa :Ack<space>
-    nnoremap <leader>as :Ack<space>--sass<space>--less<space>--css<space>
-    nnoremap <leader>aj :Ack<space>--js<space>
-    nnoremap <leader>ap :Ack<space>--scala<space>
-    nnoremap <leader>at :Ack<space>-G<space>'.tl'<space>
-endif
+" Grepper
+nnoremap <leader>aa :GrepperRg<space>
+nnoremap <leader>as :GrepperRg<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
+nnoremap <leader>aj :GrepperRg<space>-tjs<space>
+nnoremap <leader>ap :GrepperRg<space>-tscala<space>-tpy<space>-tjava<space>
+nnoremap <leader>at :GrepperRg<space>-g<space>'*.tl'<space>-g<space>'*.jsp'<space>
 
 " fzf
 nnoremap <leader>t :FZF<enter>
+let $FZF_DEFAULT_COMMAND= 'rg --files --follow'
+
 " Mapping for vimux
 nnoremap <leader>p :VimuxPromptCommand<CR>
 nnoremap <leader><leader> :VimuxRunLastCommand<CR>
@@ -191,6 +186,10 @@ autocmd! BufWritePost * Neomake
 autocmd! VimLeave *.js  !eslint_d stop
 let g:neomake_javascript_enabled_makers = ['eslint_d']
 let g:neomake_jsx_enabled_makers = ['eslint_d']
+let g:neomake_error_sign = {'texthl': 'Error', 'text': '✕ '}
+
+set autoread
+au User NeomakeFinished checktime
 " vim-jsx
 let g:jsx_ext_required = 0
 " airline
