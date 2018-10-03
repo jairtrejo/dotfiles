@@ -176,11 +176,11 @@ let g:python3_host_prog = '/Users/jair/.pyenv/versions/neovim3/bin/python'
 " Plugin specific
 "
 " Grepper
-nnoremap <leader>aa :GrepperRg<space>
-nnoremap <leader>as :GrepperRg<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
-nnoremap <leader>aj :GrepperRg<space>-tjs<space>
-nnoremap <leader>ap :GrepperRg<space>-tscala<space>-tpy<space>-tjava<space>
-nnoremap <leader>at :GrepperRg<space>-g<space>'*.tl'<space>-g<space>'*.jsp'<space>
+nnoremap <leader>aa :GrepperRg<space>-S<space>
+nnoremap <leader>as :GrepperRg<space>-S<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
+nnoremap <leader>aj :GrepperRg<space>-S<space>-tjs<space>
+nnoremap <leader>ap :GrepperRg<space>-S<space>-tscala<space>-tpy<space>-tjava<space>
+nnoremap <leader>at :GrepperRg<space>-S<space>-g<space>'*.tl'<space>-g<space>'*.jsp'<space>
 
 " fzf
 nnoremap <leader>t :FZF<enter>
