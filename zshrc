@@ -34,7 +34,7 @@ export LESSCHARSET=UTF-8
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 if [[ `uname` == 'Darwin' ]]; then
     export ANDROID_HOME=/Users/jair/Library/Android/sdk
-    export PATH=/usr/local/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+    export PATH=$HOME/bin:/usr/local/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 fi
 
 # PyEnv
