@@ -33,6 +33,7 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'ap/vim-css-color'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 "
@@ -90,8 +91,8 @@ if (has("termguicolors"))
     set t_8b=[48;2;%lu;%lu;%lum
 endif
 set background=dark
-colorscheme deep-space
-let g:airline_theme='deep_space'
+colorscheme nord
+let g:airline_theme='nord'
 
 "
 " Wildmenu
