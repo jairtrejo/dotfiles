@@ -32,6 +32,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 "
