@@ -1,10 +1,12 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'ambv/black',
 Plug 'b4winckler/vim-objc'
 Plug 'benmills/vimux'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'cohama/lexima.vim'
 Plug 'derekwyatt/vim-scala'
+Plug 'fisadev/vim-isort'
 Plug 'gavocanov/vim-js-indent'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -173,6 +175,8 @@ autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\
 " Python
 let g:python2_host_prog = '/Users/jair/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/jair/.pyenv/versions/neovim3/bin/python'
+autocmd BufWritePre *.py execute ':Isort'
+autocmd BufWritePre *.py execute ':Black'
 
 "
 " Plugin specific
@@ -213,6 +217,15 @@ au User NeomakeFinished checktime
 let g:jsx_ext_required = 0
 " airline
 let g:airline_powerline_fonts = 1
+
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Black
+let g:black_linelength = 79
 
 "
 " Misc
