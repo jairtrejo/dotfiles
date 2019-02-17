@@ -1,6 +1,6 @@
 [user]
   name = Jair Trejo
-	email = jair@chegg.com
+	email = jair@jairtrejo.mx
 	signingkey = 36515C1E
 
 [color]
@@ -41,3 +41,4 @@
 	default = simple
 [core]
 	excludesfile = /Users/jair/.gitignore
+	editor = nvim
