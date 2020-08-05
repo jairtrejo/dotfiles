@@ -16,8 +16,11 @@ Plug 'mhartington/oceanic-next'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'motus/pig.vim'
 Plug 'mxw/vim-jsx'
-Plug 'neomake/neomake'
-Plug 'othree/yajs.vim', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 Plug 'rschmukler/pangloss-vim-indent'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
@@ -29,13 +32,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/django.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mhinz/vim-grepper'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'ap/vim-css-color'
 Plug 'arcticicestudio/nord-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "
@@ -196,46 +195,14 @@ let $FZF_DEFAULT_COMMAND= 'rg --files --follow'
 nnoremap <leader>p :VimuxPromptCommand<CR>
 nnoremap <leader><leader> :VimuxRunLastCommand<CR>
 
-" Neomake
-autocmd! BufWritePost * Neomake
-autocmd! VimLeave *.js  !eslint_d stop
-let g:neomake_javascript_enabled_makers = ['eslint_d']
-let g:neomake_jsx_enabled_makers = ['eslint_d']
-let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_error_sign = {
-    \ 'text': '👹',
-    \ 'texthl': 'ErrorMsg'
-    \ }
-let g:neomake_warning_sign = {
-    \ 'text': '⚠️',
-    \ 'texthl': 'ErrorMsg'
-    \ }
-set autoread
-au User NeomakeFinished checktime
-
-" vim-jsx
-let g:jsx_ext_required = 0
 " airline
 let g:airline_powerline_fonts = 1
-" deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-" neosnippet
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" Coc
+set autoread
+nmap <silent> <leader>d <Plug>(coc-definition)
+nmap <silent> <leader>r <Plug>(coc-references)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " For conceal markers.
 if has('conceal')
