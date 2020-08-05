@@ -11,3 +11,11 @@ My configuration files for:
 * vim
 * zsh
 
+## Usage
+
+Install and run `effuse`:
+
+```
+sudo gem install effuse -v 1.1.0
+effuse --prefix="."
+```
