@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="refined"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(gitfast,python,brew,npm,pyenv)
+plugins=(gitfast python brew npm pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,6 +38,8 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 # PyEnv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
