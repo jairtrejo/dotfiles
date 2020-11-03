@@ -7,6 +7,7 @@
   branch = auto
   diff = auto
   status = auto
+	ui = auto
 
 [color "branch"]
   current = yellow reverse
@@ -31,6 +32,8 @@
   co = checkout
   st = status
   l = !zsh -c 'source ~/.githelpers && pretty_git_log'
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)%an <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+  pra = pull --rebase --autostash
 
 [i18n]
   logoutputencoding = UTF-8
@@ -42,3 +45,4 @@
 [core]
 	excludesfile = /Users/jair/.gitignore
 	editor = nvim
+	pager = less -FMRiX
