@@ -1,6 +1,6 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'psf/black',
+Plug 'psf/black'
 Plug 'b4winckler/vim-objc'
 Plug 'benmills/vimux'
 Plug 'cakebaker/scss-syntax.vim'
@@ -173,7 +173,6 @@ map [q :cprev<CR>
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --parser\ babylon
 " Python
-let g:python2_host_prog = '/Users/jair/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/jair/.pyenv/versions/neovim3/bin/python'
 autocmd BufWritePre *.py execute ':Isort'
 autocmd BufWritePre *.py execute ':Black'
