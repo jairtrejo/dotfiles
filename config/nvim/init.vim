@@ -35,6 +35,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'ap/vim-css-color'
 Plug 'arcticicestudio/nord-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'justinj/vim-pico8-syntax'
 call plug#end()
 
 "
