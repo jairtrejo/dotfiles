@@ -19,7 +19,7 @@ if [[ `uname` == 'Darwin' ]]; then
     alias love="/Applications/love.app/Contents/MacOS/love"
     alias vim='nvim'
 else
-    alias tmux='TERM=screen-256color-bce tmux -u'
+    alias tmux='tmux -u'
     alias ls='ls -G --color=auto'
 fi
 
