@@ -49,14 +49,6 @@ export NVM_DIR="/Users/jair/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$HOME/Library/Haskell/bin:$PATH" # Add Haskell PATH
 
-# HyperTerm.app runs `bash -ilc env` in an attempt to find npm
-if [[ "$(ps -o command= $$)" =~ bash\ -ilc\ env &&
-      "$(ps -o command= $PPID)" =~ HyperTerm\.app ]]; then
-  nvm use stable
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(direnv hook zsh)"
 
-# added by travis gem
-[ -f /Users/jair/.travis/travis.sh ] && source /Users/jair/.travis/travis.sh

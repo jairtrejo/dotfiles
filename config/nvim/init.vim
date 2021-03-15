@@ -1,6 +1,6 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'ambv/black',
+Plug 'psf/black',
 Plug 'b4winckler/vim-objc'
 Plug 'benmills/vimux'
 Plug 'cakebaker/scss-syntax.vim'
@@ -204,6 +204,16 @@ set autoread
 nmap <silent> <leader>d <Plug>(coc-definition)
 nmap <silent> <leader>r <Plug>(coc-references)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 " For conceal markers.
 if has('conceal')
