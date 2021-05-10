@@ -8,13 +8,12 @@ Plug 'cohama/lexima.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'fisadev/vim-isort'
 Plug 'gavocanov/vim-js-indent'
-Plug 'jimmyhchan/dustjs.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'motus/pig.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -36,6 +35,9 @@ Plug 'ap/vim-css-color'
 Plug 'arcticicestudio/nord-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'justinj/vim-pico8-syntax'
+Plug 'artoj/pgn-syntax-vim'
+Plug 'vlime/vlime', {'rtp': 'vim/'}
+Plug 'vim-scripts/paredit.vim'
 call plug#end()
 
 "
@@ -182,15 +184,30 @@ autocmd BufWritePre *.py execute ':Black'
 " Plugin specific
 "
 " Grepper
-nnoremap <leader>aa :GrepperRg<space>-S<space>
 nnoremap <leader>as :GrepperRg<space>-S<space>-g<space>'*.css'<space>-g<space>'*.scss'<space>-g<space>'*.less'<space>
 nnoremap <leader>aj :GrepperRg<space>-S<space>-tjs<space>-tts<space>
 nnoremap <leader>ap :GrepperRg<space>-S<space>-tscala<space>-tpy<space>-tjava<space>
 nnoremap <leader>at :GrepperRg<space>-S<space>-g<space>'*.tl'<space>-g<space>'*.jsp'<space>
 
 " fzf
-nnoremap <leader>t :FZF<enter>
+nnoremap <leader>t :Files<enter>
+nnoremap <leader>b :Buffers<enter>
+nnoremap <leader>aa :Rg<enter>
 let $FZF_DEFAULT_COMMAND= 'rg --files --follow'
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Comment'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " Mapping for vimux
 nnoremap <leader>p :VimuxPromptCommand<CR>
@@ -201,8 +218,10 @@ let g:airline_powerline_fonts = 1
 
 " Coc
 set autoread
+set updatetime=300
 nmap <silent> <leader>d <Plug>(coc-definition)
 nmap <silent> <leader>r <Plug>(coc-references)
+nmap <silent> <leader>f <Plug>(coc-format-selected)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

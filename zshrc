@@ -51,4 +51,8 @@ export PATH="$HOME/Library/Haskell/bin:$PATH" # Add Haskell PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(direnv hook zsh)"
+#
+# ASDF
+echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
+. /usr/local/opt/asdf/asdf.sh
